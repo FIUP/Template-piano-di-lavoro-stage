@@ -1,0 +1,220 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% NIH Grant Proposal for the Specific Aims and Research Plan Sections
+% LaTeX Template
+% Version 1.0 (21/10/13)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Erick Tatro (erickttr@gmail.com) with modifications by:
+% Vel (vel@latextemplates.com)
+%
+% Adapted from:
+% J. Hrabe (http://www.magalien.com/public/nih_grants_in_latex.html)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+\documentclass[a4paper]{article}
+\usepackage[a4paper, headsep=1.8cm ]{geometry} % Reduce the size of the margin
+%\usepackage{showframe}
+% Variabili per non ripetere i contatti mille volte, MODIFICARE QUI
+\newcommand{\nomeStudente}{Nome}
+\newcommand{\cognomeStudente}{Cognome}
+\newcommand{\matricolaStudente}{1234567}
+\newcommand{\emailStudente}{nome.cognome@studenti.unipd.it}
+\newcommand{\telStudente}{+39 1234567890}
+
+\newcommand{\nomeTutorAziendale}{Nome}
+\newcommand{\cognomeTutorAziendale}{Cognome}
+\newcommand{\emailTutorAziendale}{email@dominio.it}
+\newcommand{\telTutorAziendale}{+39 0123456789}
+
+\newcommand{\ragioneSocAzienda}{Nome Azienda}
+\newcommand{\indirizzoAzienda}{Via viavia num, città (prov)}
+\newcommand{\sitoAzienda}{www.sitoweb.com}
+
+
+
+% A note on fonts: As of 2013, NIH allows Georgia, Arial, Helvetica, and Palatino Linotype. LaTeX doesn't have Georgia or Arial built in; you can try to come up with your own solution if you wish to use those fonts. Here, Palatino & Helvetica are available, leave the font you want to use uncommented while commenting out the other one.
+%\usepackage{palatino} % Palatino font
+\usepackage[utf8x]{inputenc}%codifica
+\usepackage[italian]{babel} % setta la lingua - necessaria per il comando /today, che altrimenti stampa in inglese
+\usepackage{helvet} % Helvetica font
+\usepackage{array}
+\usepackage{multirow} % permette di unire più celle verticali nelle tabelle
+\usepackage{hhline} % permette di utilizzare linee delle tabelle particolari
+\usepackage{arydshln}
+\renewcommand*\familydefault{\sfdefault} % Use the sans serif version of the font
+\usepackage[T1]{fontenc}
+\linespread{1.2} % A little extra line spread is better for the Palatino font
+\usepackage{fancyhdr} %pacchetto per le intestazioni
+\usepackage{hyperref} % pacchetto per i riferimenti
+\usepackage{lipsum} % Used for inserting dummy 'Lorem ipsum' text into the template
+\usepackage{amsfonts, amsmath, amsthm, amssymb} % For math fonts, symbols and environments
+\usepackage{graphicx} % Required for including images
+%\usepackage{booktabs} % Top and bottom rules for table
+%\usepackage{wrapfig} % Allows in-line images
+%\usepackage[labelfont=bf]{caption} % Make figure numbering in captions bold
+\usepackage{ragged2e}
+% personalizza l'intestazione e piè di pagina
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\rhead{
+	\parbox{1.7cm}{\raggedleft Università degli Studi di Padova}
+	\parbox{1.5cm}{\includegraphics[height=1.5cm]{./immagini/logo-unipd.png}}	
+}
+\lhead{
+	\parbox{10cm}{
+	\nomeStudente{} \cognomeStudente \\
+	\matricolaStudente\\
+	Piano di lavoro stage c/o \ragioneSocAzienda
+	}
+}
+\renewcommand{\headrulewidth}{0cm}
+
+
+\hyphenation{ionto-pho-re-tic iso-tro-pic fortran} % Specifies custom hyphenation points for words or words that shouldn't be hyphenated at all
+
+\hypersetup{
+	colorlinks=true,
+	linkcolor=black,
+	urlcolor=blue
+}
+
+%-------------------------------------------------------------------------------------------------
+%	Creato da Mich - Updated by Simone Pessotto 04/08/2015 - Updated by Beatrice Guerra 11/05/2017
+%-------------------------------------------------------------------------------------------------
+
+\begin{document}
+
+\begin{titlepage}
+	\centering
+	\includegraphics[height=5cm]{./immagini/logo-unipd.png} \par \vspace{1cm}
+	{\scshape\LARGE Università degli Studi di Padova \par}
+	\vspace{0.5cm}
+	{\scshape\Large Laurea in Informatica \par}
+	\vspace{1cm}
+	{\Huge\bfseries Piano di lavoro \par}
+	\vspace{0.5cm}
+	{\Large\itshape Azienda:\par \ragioneSocAzienda{} \par}
+	\vfill
+	{\scshape\Large \nomeStudente{} \cognomeStudente{}\par}
+	{\scshape\large \matricolaStudente \par}
+	\vfill
+	{\itshape \today}
+	
+\end{titlepage}
+
+\section*{Contatti}
+\parbox{14.7cm}{\textbf{Studente:} \nomeStudente{} \cognomeStudente{}, \href{mailto:\emailStudente{}}{\emailStudente{}}, \telStudente{}} \\
+
+\noindent
+\parbox{14.7cm}{\textbf{Tutor aziendale:} \nomeTutorAziendale{} \cognomeTutorAziendale{}, \href{mailto:\emailTutorAziendale{}}{\emailTutorAziendale{}},\linebreak \telTutorAziendale{}} \\
+
+\noindent
+\parbox{14.7cm}{\textbf{Azienda:} \ragioneSocAzienda{}, \indirizzoAzienda{}, \href{\sitoAzienda{}}{\sitoAzienda{}}}
+
+\section*{Scopo dello stage}
+
+Nome Azienda nasce come software house specializzata nello sviluppo di applicazioni gestionali per aziende manifatturiere ed è oggi una leading company italiana nella progettazione e realizzazione di soluzioni a supporto della riorganizzazione di vari processi aziendali e professionali.\\
+In particolare la business unit BU si occupa di web apps marketing solutions. La web agency sviluppa app IOS e Android per attività di prevendita, cataloghi prodotti, raccolta ordini, assistenza tecnica, al fine di offrire strumenti sempre più efficaci per la gestione di processi aziendali ERP in mobilità. BU guida anche il cliente all’utilizzo della piattaforma web a supporto di strategie commerciali B2B e B2C.\\
+
+Lo stage prevede l'inserimento dello studente nell'area di sviluppo e consulenza Web come tecnico programmatore. Lo studente svilupperà le conoscenze e le competenze idonee ad effettuare analisi e sviluppo nel campo delle applicazioni web. In particolare sarà coinvolto in attività di programmazione relative a portali B2B e B2C utilizzando Java avanzato ed il framework di sviluppo JSF. Utilizzerà inoltre HTML5, CSS3, JavaScript, Prestashop e RPG.
+
+\clearpage
+\section*{Pianificazione del lavoro}
+La pianificazione, in termini di quantità di ore di lavoro, sarà così distribuita:
+\begin{center}	
+\begin{tabular}{|>{\centering} m{1.5cm}|>{\centering} m{1.5cm}|m{10cm}|}
+	\hline
+	\multicolumn{2}{|c|}{\textbf{Durata in ore}} & \textbf{Descrizione dell'attività} \\
+	\hline
+	\multicolumn{2}{|c|}{72} & Formazione
+	 \begin{itemize}
+		\item Linguaggio RPG
+		\item Sistema AS400
+		\item Framework JSF
+		\item Applicazione B2B
+	\end{itemize} 
+	\\
+	\hline
+	
+	\multirow{4}{*}{240} & & Affiancamento al tutor presso clienti\\
+	\cline{2-2}
+	& 40 & \begin{itemize}
+		\item Analisi di portali Web esistenti
+		\item Analisi dell'impianto commerciale del gestionale
+		\item Analisi dell'impianto amministrativo del gestionale
+	\end{itemize} \\
+	\cline{2-2}
+	& 160 & \begin{itemize}
+		\item Progettazione di portali Web per la raccolta degli ordini
+		\item Realizzazione di software in Java
+		\item Realizzazione di front-end (HTML, CSS, JavaScript)
+	\end{itemize} \\
+	\cline{2-2}
+	& 40 & \begin{itemize}
+		\item Analisi e stima di nuove richieste dei clienti
+	\end{itemize} \\
+	\hline
+	
+
+	\multicolumn{2}{|c|}{\textbf{Totale ore}} & \multicolumn{1}{l}{} \\
+	\cline{1-2}
+	\multicolumn{2}{|c|}{\textbf{312}} & \multicolumn{1}{l}{} \\
+	\cline{1-2}
+	
+\end{tabular}
+
+\end{center}
+
+\clearpage
+\section*{Obiettivi}
+Si farà riferimento ai requisiti secondo le seguenti notazioni:
+\begin{itemize}
+	\item \textbf{Ob} per i requisiti obbligatori, vincolanti in quanto obiettivo primario richiesto dal committente;
+	\item  \textbf{D} per i requisiti desiderabili, non vincolanti o strettamente necessari, ma dal riconoscibile valore aggiunto;
+	\item \textbf{Op} per i requisiti opzionali, rappresentanti valore aggiunto non strettamente competitivo.
+\end{itemize}
+Le sigle precedentemente indicate saranno seguite da un numero, identificativo del requisito.\\
+
+
+Si prevede lo svolgimento dei seguenti obiettivi:
+
+\begin{table}[h]
+	\centering
+	\begin{tabular}{|>{\centering} m{2cm}|m{11cm}|}
+	\hline
+	\multicolumn{2}{|c|}{\textbf{Obbligatori}}\\
+	\hline
+	Ob1 & Progettazione dei portali Web per la raccolta degli ordini \\
+	\hline
+	Ob2 & Realizzazione software Java \\
+	\hline
+	Ob3 & Interazione con database SQL \\
+	\hline
+	Ob4 & Realizzazione front-end HTML, CSS, JavaScript \\
+	\hline
+	\multicolumn{2}{|c|}{\textbf{Desiderabili}}\\
+	\hline
+	D1 & Conoscenza dell'impianto commerciale del gestionale \\
+	\hline
+	D2 & Conoscenza dell'impianto amministrativo del gestionale \\
+	\hline
+	D3 & Autonomia della gestione con il cliente per raccolta nuove richieste \\
+	\hline
+	\multicolumn{2}{|c|}{\textbf{Opzionali}} \\
+	\hline
+	Op1 & Analisi e stima nuove richieste clienti \\
+	\hline
+\end{tabular}
+
+\end{table}
+\end{document}
