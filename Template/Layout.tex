@@ -2,6 +2,7 @@
 %				Creato da Mich
 %   Updated by Simone Pessotto 04/08/2015
 %   Updated by Riccardo Montagnin 13/04/2017
+%   Updated by Federico Silvio Busetto 15/09/2017
 %----------------------------------------------------------------------------------------
 
 \documentclass[11pt,a4paper]{article}
@@ -14,31 +15,32 @@
 \linespread{1.2}
 \usepackage{fancyhdr}
 \usepackage{hyperref}
+\usepackage{lastpage}
 \usepackage{lipsum}
 \usepackage{amsfonts, amsmath, amsthm, amssymb}
 \usepackage{graphicx}
 
 \usepackage{tabularx}
 \newcommand{\specialcell}[2][c]{%
-	\begin{tabular}[#1]{@{}l@{}}#2
-	\end{tabular}
+    \begin{tabular}[#1]{@{}l@{}}#2
+    \end{tabular}
 }
 
 % Specifies custom hyphenation points for words or words that shouldn't be hyphenated at all
 \hyphenation{ionto-pho-re-tic iso-tro-pic fortran} 
 \hypersetup{
-	colorlinks=true,
-	linkcolor=black,
-	urlcolor=blue
+    colorlinks=true,
+    linkcolor=black,
+    urlcolor=blue
 }
 
 \usepackage[
- a4paper,
- top=2.5cm,
- bottom=2.5cm,
- left=1.5cm,
- right=1.5cm,
- head=30pt
+a4paper,
+top=2.5cm,
+bottom=2.5cm,
+left=1.5cm,
+right=1.5cm,
+head=30pt
 ]{geometry}
 
 \usepackage[italian]{isodate}
@@ -58,16 +60,27 @@
 % 	HEADING STILE
 %----------------------------------------------------------------------------------------
 \newcommand\textline[4][t]{%
-  \noindent\parbox[#1]{.333\textwidth}{\raisebox{-0.40\height}{#2}}%
-  \parbox[#1]{.333\textwidth}{\centering #3}%
-  \parbox[#1]{.333\textwidth}{\raggedleft #4}%
+    \noindent\parbox[#1]{.333\textwidth}{\raisebox{-0.40\height}{#2}}%
+    \parbox[#1]{.333\textwidth}{\centering #3}%
+    \parbox[#1]{.333\textwidth}{\raggedleft #4}%
 }
 
 \lhead{
-  \textline[t]{\includegraphics[width=1cm, keepaspectratio=true]{Immagini/UniPd.png}}
-  {Piano di lavoro stage presso \\\ragioneSocAzienda}
-  {\nomeStudente \cognomeStudente\\ (\matricolaStudente)}
+    \textline[t]{\includegraphics[width=1cm, keepaspectratio=true]{img/UniPd.png}}
+    {Piano di lavoro stage presso \\\ragioneSocAzienda}
+    {\nomeStudente \cognomeStudente\\ (\matricolaStudente)}
 }
 
 % Line under the heading
 \renewcommand{\headrulewidth}{0.4pt}  
+
+%-----------------------------------------------------------------------------------------
+%   FOOTER STYLE
+%-----------------------------------------------------------------------------------------
+
+%***PIÈ DI PAGINA***
+%\lfoot{\includegraphics[keepaspectratio = true, width = 25px] {img/UniPd.png} \textit{\nomeStudente 
+%\cognomeStudente (\matricolaStudente)}\\ \footnotesize{\emailStudente}}
+\rfoot{\thepage/\pageref{LastPage}} %per le prime pagine: mostra solo il numero romano
+\cfoot{}
+\renewcommand{\footrulewidth}{0.4pt}   %Linea sopra il piè di pagina
