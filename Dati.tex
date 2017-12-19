@@ -1,7 +1,17 @@
 %----------------------------------------------------------------------------------------
+%   USEFUL COMMANDS
+%----------------------------------------------------------------------------------------
+
+\newcommand{\dipartimento}{Dipartimento di Matematica ``Tullio Levi-Civita''}
+
+%----------------------------------------------------------------------------------------
 % 	USER DATA
 %----------------------------------------------------------------------------------------
-\newcommand{\dataApprovazione}{26 Aprile 2017}
+
+% Data di approvazione del piano da parte del tutor interno
+% compilare inserendo al posto di GG 2 cifre per il giorno, e al posto di 
+% AAAA 4 cifre per l'anno
+\newcommand{\dataApprovazione}{GG Mese AAAA}
 
 \newcommand{\nomeStudente}{}
 \newcommand{\cognomeStudente}{}
@@ -20,21 +30,24 @@
 \newcommand{\sitoAzienda}{http://example.com/}
 
 \newcommand{\titoloTutorInterno}{Prof.}
-\newcommand{\nomeTutorInterno}{Tullio}
-\newcommand{\cognomeTutorInterno}{Vardanega}
+\newcommand{\nomeTutorInterno}{NomeDocente}
+\newcommand{\cognomeTutorInterno}{CognomeDocente}
 
 
 \newcommand{\scopoStage}{
+    % Personalizzare inserendo lo scopo dello stage, cioè una breve descrizione
 Lo scopo di questo progetto di stage è ... .\\
 Lo studente avrà il compito di ... .\\
 }
 
 \newcommand{\interazioneStudenteTutor}{
-Lo studente, durante tutto il periodo di stage, si troverà a lavorare all'interno dello stesso ambiente lavorativo del resto del personale aziendale. Egli potrà pertanto ... .\\
-Una volta la settimana, inoltre, si confronterà per un'ora con il responsabile ... .\\
+    % Personalizzare definendo le modalità di interazione col tutor aziendale
+Regolarmente, (almeno una volta la settimana) ci saranno incontri diretti con il tutor aziendale \nomeTutorAziendale\ 
+\cognomeTutorAziendale\ e stakeholders per verificare lo stato di avanzamento, chiarire eventualmente  gli obiettivi, affinare la ricerca e aggiornare il piano stesso di lavoro.
 }
 
 \newcommand{\prodottiAttesi}{
+    % Personalizzare definendo i prodotti attesi (facoltativo)
 Lo studente dovrà produrre una relazione scritta che illustri i seguenti punti.
 \begin{enumerate}
 	\item Primo punto \\
@@ -51,10 +64,56 @@ Nel qual caso in cui lo studente, in seguito all'analisi, abbia ancora tempo a s
 }
 
 \newcommand{\contenutiFormativi}{
+    % Personalizzare indicando le tecnologie e gli ambiti di interesse dello stage
 Durante questo progetto di stage lo studente avrà occasione di approfondire le sue conoscenze nell'ambito ... .
 }
 
+\newcommand{\prospettoSettimanale}{
+     % Personalizzare indicando in lista, i vari task settimana per settimana
+    \begin{itemize}
+        \item \textbf{Prima Settimana}
+        \begin{itemize}
+            \item Incontro con persone coinvolte nel progetto per discutere i requisiti e le richieste
+            relativamente al sistema da sviluppare;
+            \item Verifica credenziali e strumenti di lavoro assegnati;
+            \item Presa visione dell’infrastruttura esistente;
+            \item Formazione sulle tecnologie adottate;
+        \end{itemize}
+        \item \textbf{Seconda Settimana - Sottotitolo} 
+        \begin{itemize}
+            \item ;
+        \end{itemize}
+        \item \textbf{Terza Settimana - Sottotitolo} 
+        \begin{itemize}
+            \item ;
+        \end{itemize}
+        \item \textbf{Quarta Settimana - Sottotitolo} 
+        \begin{itemize}
+            \item ;
+        \end{itemize}
+        \item \textbf{Quinta Settimana - Sottotitolo} 
+        \begin{itemize}
+            \item ;
+        \end{itemize}
+        %\newpage
+        \item \textbf{Sesta Settimana - Sottotitolo} 
+        \begin{itemize}
+            \item ;
+        \end{itemize}
+        \item \textbf{Settima Settimana - Sottotitolo} 
+        \begin{itemize}
+            \item ;
+        \end{itemize}
+        \item \textbf{Ottava Settimana - Conclusione} 
+        \begin{itemize}
+            \item ;
+        \end{itemize}
+    \end{itemize}
+}
+
 \newcommand{\attivita}{
+    % Personalizzare indicando in tabella la ripartizione oraria delle varie attività
+    % indicate nel prospettoSettimanale
 	 48 & Prima attività \\ \hdashline 
 	 \multirow{4}{0cm}\\ 
 	 \textit{16} & 
@@ -96,7 +155,8 @@ Durante questo progetto di stage lo studente avrà occasione di approfondire le 
 	 \hline
 }
 
-\newcommand{\totaleOre}{300}
+% Indicare il totale complessivo (deve essere compreso tra le 300 e le 320 ore)
+\newcommand{\totaleOre}{}
 
 \newcommand{\obiettiviObbligatori}{
 	 \item \underline{\textit{O01}}: primo obiettivo;
@@ -116,4 +176,4 @@ Durante questo progetto di stage lo studente avrà occasione di approfondire le 
 	 \item \underline{\textit{F03}}: terzo obiettivo;
 }
 
-\newcommand{\pathDiagramma}{Immagini/gantt.png}
+\newcommand{\pathDiagramma}{img/gantt.png}
