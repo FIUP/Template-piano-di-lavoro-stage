@@ -1,102 +1,86 @@
 %----------------------------------------------------------------------------------------
+%   USEFUL COMMANDS
+%----------------------------------------------------------------------------------------
+
+\newcommand{\dipartimento}{Dipartimento di Matematica ``Tullio Levi-Civita''}
+
+%----------------------------------------------------------------------------------------
 % 	USER DATA
 %----------------------------------------------------------------------------------------
-\newcommand{\dataApprovazione}{26 Aprile 2017}
 
-\newcommand{\nomeStudente}{}
-\newcommand{\cognomeStudente}{}
-\newcommand{\matricolaStudente}{}
-\newcommand{\emailStudente}{}
-\newcommand{\telStudente}{}
+% Data di approvazione del piano da parte del tutor interno
+% compilare inserendo al posto di GG 2 cifre per il giorno, e al posto di 
+% AAAA 4 cifre per l'anno
+\newcommand{\dataApprovazione}{GG Mese AAAA}
 
-\newcommand{\nomeTutorAziendale}{}
-\newcommand{\cognomeTutorAziendale}{}
-\newcommand{\emailTutorAziendale}{}
-\newcommand{\telTutorAziendale}{}
+% Dati dello Studente
+\newcommand{\nomeStudente}{Pinco}
+\newcommand{\cognomeStudente}{Pallino}
+\newcommand{\matricolaStudente}{1000000}
+\newcommand{\emailStudente}{mail@studenti.unipd.it}
+\newcommand{\telStudente}{+ 39 000 00 00 000}
+
+% Dati del Tutor Aziendale
+\newcommand{\nomeTutorAziendale}{nomeTutor}
+\newcommand{\cognomeTutorAziendale}{cognomeTutor}
+\newcommand{\emailTutorAziendale}{mail@mail.it}
+\newcommand{\telTutorAziendale}{+ 39 000 00 00 000}
 \newcommand{\ruoloTutorAziendale}{}
 
+% Dati dell'Azienda
 \newcommand{\ragioneSocAzienda}{Azienda S.p.A}
 \newcommand{\indirizzoAzienda}{Via Roma 1, Roma (RM)}
 \newcommand{\sitoAzienda}{http://example.com/}
 
+% Dati del Tutor Interno (Docente)
 \newcommand{\titoloTutorInterno}{Prof.}
-\newcommand{\nomeTutorInterno}{Tullio}
-\newcommand{\cognomeTutorInterno}{Vardanega}
+\newcommand{\nomeTutorInterno}{NomeDocente}
+\newcommand{\cognomeTutorInterno}{CognomeDocente}
 
-
-\newcommand{\scopoStage}{
-Lo scopo di questo progetto di stage è ... .\\
-Lo studente avrà il compito di ... .\\
+\newcommand{\prospettoSettimanale}{
+     % Personalizzare indicando in lista, i vari task settimana per settimana
+    \begin{itemize}
+        \item \textbf{Prima Settimana}
+        \begin{itemize}
+            \item Incontro con persone coinvolte nel progetto per discutere i requisiti e le richieste
+            relativamente al sistema da sviluppare;
+            \item Verifica credenziali e strumenti di lavoro assegnati;
+            \item Presa visione dell’infrastruttura esistente;
+            \item Formazione sulle tecnologie adottate;
+        \end{itemize}
+        \item \textbf{Seconda Settimana - Sottotitolo} 
+        \begin{itemize}
+            \item ;
+        \end{itemize}
+        \item \textbf{Terza Settimana - Sottotitolo} 
+        \begin{itemize}
+            \item ;
+        \end{itemize}
+        \item \textbf{Quarta Settimana - Sottotitolo} 
+        \begin{itemize}
+            \item ;
+        \end{itemize}
+        \item \textbf{Quinta Settimana - Sottotitolo} 
+        \begin{itemize}
+            \item ;
+        \end{itemize}
+        \item \textbf{Sesta Settimana - Sottotitolo} 
+        \begin{itemize}
+            \item ;
+        \end{itemize}
+        \item \textbf{Settima Settimana - Sottotitolo} 
+        \begin{itemize}
+            \item ;
+        \end{itemize}
+        \item \textbf{Ottava Settimana - Conclusione} 
+        \begin{itemize}
+            \item ;
+        \end{itemize}
+    \end{itemize}
 }
 
-\newcommand{\interazioneStudenteTutor}{
-Lo studente, durante tutto il periodo di stage, si troverà a lavorare all'interno dello stesso ambiente lavorativo del resto del personale aziendale. Egli potrà pertanto ... .\\
-Una volta la settimana, inoltre, si confronterà per un'ora con il responsabile ... .\\
-}
-
-\newcommand{\prodottiAttesi}{
-Lo studente dovrà produrre una relazione scritta che illustri i seguenti punti.
-\begin{enumerate}
-	\item Primo punto \\
-		  Descrizione. 
-
-	\item Secondo punto \\
-		  Descrizione.
-
-	\item Terzo punto.
-		  Descrizione.
-\end{enumerate}
-
-Nel qual caso in cui lo studente, in seguito all'analisi, abbia ancora tempo a sua disposizione ... .
-}
-
-\newcommand{\contenutiFormativi}{
-Durante questo progetto di stage lo studente avrà occasione di approfondire le sue conoscenze nell'ambito ... .
-}
-
-\newcommand{\attivita}{
-	 48 & Prima attività \\ \hdashline 
-	 \multirow{4}{0cm}\\ 
-	 \textit{16} & 
-	 \textit{Primo compito} \\
-	 \textit{8} & 
-	 \textit{Secondo compito} \\ 
-	 \textit{8} & 
-	 \textit{Terzo compito} \\
-	 \textit{16} & 
-	 \textit{Quarto compito} \\ 	 
-	 \hline
-
-	 40 & Seconda attività \\ \hdashline 
-	 \multirow{3}{0cm}\\ 
-	 \textit{24} & 
-	 \textit{Primo compito} \\
-	 \textit{8} & 
-	 \textit{Secondo compito} \\
-	 \textit{8} & 
-	 \textit{Terzo compito} \\
-	 \hline
-	 
-	 80 & Terza attività \\ \hdashline 
-	 \multirow{1}{0cm}\\ 
-	 \textit{80} & 
-	 \textit{Primo compito} \\
-	 \hline
-	 
-	 52 & Quarta attività \\ \hdashline 
-	 \multirow{1}{0cm}\\ 
-	 \textit{52} & 
-	 \textit{Secondo compito} \\
-	 \hline
-	 
-	 80 & Quinta attività  \\ \hdashline 
-	 \multirow{1}{0cm}\\ 
-	 \textit{8} & 
-	 \textit{Primo compito} \\
-	 \hline
-}
-
-\newcommand{\totaleOre}{300}
+% Indicare il totale complessivo (deve essere compreso tra le 300 e le 320 ore)
+\newcommand{\totaleOre}{}
 
 \newcommand{\obiettiviObbligatori}{
 	 \item \underline{\textit{O01}}: primo obiettivo;
@@ -115,5 +99,3 @@ Durante questo progetto di stage lo studente avrà occasione di approfondire le 
 	 \item \underline{\textit{F02}}: secondo obiettivo;
 	 \item \underline{\textit{F03}}: terzo obiettivo;
 }
-
-\newcommand{\pathDiagramma}{Immagini/gantt.png}
