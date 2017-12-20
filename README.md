@@ -30,4 +30,4 @@ Il seguente template serve per creare un file `.pdf` contenente il piano di lavo
 # Crediti
 - Template originale di Michele Caovilla (Mich)
 - Rivisitazione completa del template da parte di Riccardo Montagnin
-- Modfiche ulteriori al frontespizio, all'impaginazione, al prospetto settimanale e modularità del template [Federico Silvio Busetto](@fedsib)
+- Modfiche ulteriori al frontespizio, all'impaginazione, al prospetto settimanale e modularità del template Federico Silvio Busetto
