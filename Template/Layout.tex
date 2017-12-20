@@ -18,12 +18,13 @@
 \usepackage{lastpage}
 \usepackage{amsfonts, amsmath, amsthm, amssymb}
 \usepackage{graphicx}
-
 \usepackage{tabularx}
-\newcommand{\specialcell}[2][c]{%
-    \begin{tabular}[#1]{@{}l@{}}#2
-    \end{tabular}
-}
+
+% Comando per le firme, per aggiungere dei campi Data, decommentare le due righe sotto
+\newcommand*{\SignatureAndDate}[1]{%
+    \par\noindent\makebox[4.0in]{\hrulefill} %\hfill\makebox[2.0in]{\hrulefill}%
+    \par\noindent\makebox[4.0in][l]{#1}      %\hfill\makebox[2.0in][l]{Date}%
+}%
 
 % Specifies custom hyphenation points for words or words that shouldn't be hyphenated at all
 \hyphenation{ionto-pho-re-tic iso-tro-pic fortran} 
