@@ -24,8 +24,22 @@ In caso non si vogliano utilizzare alcune sezioni, basterà commentarle nel file
 
 **Nota:** _Le sezioni 5, 9 e 10 non sono obbligatorie ma potrebbero essere richieste dal tutor interno._
 
+## Scelta dello stile
+Il template offre la possibilità di scegliere tra 2 stili, ognuno personalizzerà l'header e il footer di ciascuna pagina, nello specifico:
+1. **Stile Unipd**: Nell'header compare Il logo Unipd, i dati dello studente (nome, cognome e matricola, la ragione sociale dell'azienda dove si fa lo stage). 
+Nel footer, a destra viene indicato solamente il numero di pagina attuale rispetto al totale.
+2. **Stile Aziendale**: Nell'header compare: Il logo aziendale, la ragione sociale dell'azienda e il sito internet aziendale; nel footer al centro viene indicato il numero di pagina attuale rispetto al totale e ai lati i dati dell'azienda, con i relativi dati di contatto (ragione sociale, indirizzo, sito, telefono, email, P.IVA).
+
+### Uso degli stili
+
+Per usare lo stile aziendale, occorre:
+
+0. Chiedere il consenso per l'utilizzo del logo degli altri dati aziendali al vostro tutor
+1. Inserire nella cartella `img` il logo aziendale chiamandolo `logo_azienda.png`
+2. Nel file `Layout.tex`, commentare `\stileUNIPD` (attivo di default) e decommentare `\stileAziendale`
+
 # Attenzione!
-Il seguente template serve per creare un file `.pdf` contenente il piano di lavoro dello studente ma per essere ufficialmente approvato,potrebbe essere necessario stamparlo su carta intestata dell'azienda, come se fosse un documento ufficiale. A tal fine andrà commentata la sezione di `Preface` e gli header dal file `Layout.tex`.
+Il seguente template serve per creare un file `.pdf` contenente il piano di lavoro dello studente ma per essere ufficialmente approvato,potrebbe essere necessario stamparlo su carta intestata dell'azienda, come se fosse un documento ufficiale. Lo stile UNIPD potrebbe non venir accettato da tutti i docenti, chiedete sempre conferma al vostro tutor interno.
 
 # Crediti
 - Template originale di Michele Caovilla (Mich)
