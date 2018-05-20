@@ -15,7 +15,6 @@
 \renewcommand*\familydefault{\sfdefault}
 \linespread{1.2}
 \usepackage{fancyhdr}
-\usepackage{hyperref}
 \usepackage{lastpage}
 \usepackage{amsfonts, amsmath, amsthm, amssymb}
 \usepackage{graphicx}
@@ -26,14 +25,6 @@
     \par\noindent\makebox[4.0in]{\hrulefill} %\hfill\makebox[2.0in]{\hrulefill}%
     \par\noindent\makebox[4.0in][l]{#1}      %\hfill\makebox[2.0in][l]{Date}%
 }%
-
-% Specifies custom hyphenation points for words or words that shouldn't be hyphenated at all
-\hyphenation{ionto-pho-re-tic iso-tro-pic fortran} 
-\hypersetup{
-    colorlinks=true,
-    linkcolor=black,
-    urlcolor=blue
-}
 
 \usepackage[
 a4paper,
@@ -48,6 +39,15 @@ footskip=10pt
 
 \usepackage[italian]{isodate}
 \usepackage{arydshln}
+\usepackage{hyperref}
+
+% Specifies custom hyphenation points for words or words that shouldn't be hyphenated at all
+\hyphenation{ionto-pho-re-tic iso-tro-pic fortran} 
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    urlcolor=blue
+}
 
 %----------------------------------------------------------------------------------------
 %	PAGE STYLE
