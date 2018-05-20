@@ -7,16 +7,15 @@
 
 \documentclass[11pt,a4paper]{article}
 
+\usepackage[T1]{fontenc}
 \usepackage[utf8x]{inputenc}
+\usepackage[italian]{babel}
 \usepackage{helvet}
 \usepackage{multirow}
 \renewcommand*\familydefault{\sfdefault}
-\usepackage[T1]{fontenc}
 \linespread{1.2}
 \usepackage{fancyhdr}
-\usepackage{hyperref}
 \usepackage{lastpage}
-\usepackage{amsfonts, amsmath, amsthm, amssymb}
 \usepackage{graphicx}
 \usepackage{tabularx}
 
@@ -26,6 +25,22 @@
     \par\noindent\makebox[4.0in][l]{#1}      %\hfill\makebox[2.0in][l]{Date}%
 }%
 
+\usepackage[
+a4paper,
+top=2.5cm,
+bottom=2.5cm,
+left=1.5cm,
+right=1.5cm,
+head=30pt,
+textheight=8in,
+footskip=10pt
+]{geometry}
+
+\usepackage[italian]{isodate}
+\usepackage{arydshln}
+\usepackage{hyperref}
+\usepackage{amsfonts, amsmath, amsthm, amssymb}
+
 % Specifies custom hyphenation points for words or words that shouldn't be hyphenated at all
 \hyphenation{ionto-pho-re-tic iso-tro-pic fortran} 
 \hypersetup{
@@ -33,18 +48,6 @@
     linkcolor=black,
     urlcolor=blue
 }
-
-\usepackage[
-a4paper,
-top=2.5cm,
-bottom=2.5cm,
-left=1.5cm,
-right=1.5cm,
-head=30pt
-]{geometry}
-
-\usepackage[italian]{isodate}
-\usepackage{arydshln}
 
 %----------------------------------------------------------------------------------------
 %	PAGE STYLE
@@ -57,19 +60,70 @@ head=30pt
 \setlength{\parindent}{0pt}
 
 %----------------------------------------------------------------------------------------
+%	UNIPD STYLE
+% ---------------------------------------------------------------------------------------
+\newcommand{\stileUNIPD}{
+    
+    % header
+    \lhead{
+       \textline[t]{\includegraphics[width=1cm, keepaspectratio=true]{img/UniPd.png}}
+        {Piano di lavoro stage presso \\\ragioneSocAzienda}
+        {\nomeStudente \cognomeStudente\\ (\matricolaStudente)}
+    }
+
+    % footer
+    \rfoot{\thepage/\pageref{LastPage}} %per le prime pagine: mostra solo il numero romano
+    \cfoot{}
+
+}
+
+%----------------------------------------------------------------------------------------
+%	COMPANY STYLE
+% ---------------------------------------------------------------------------------------
+
+\newcommand{\stileAziendale}{
+    % Header
+    \lhead{
+        \textline[t]{\includegraphics[width=1cm, keepaspectratio=true]{img/logo_azienda.png}}
+        {\textbf{\ragioneSocAzienda}}
+        {\sitoAzienda}
+    }
+
+
+    %Footer
+    \lfoot{
+        {\fontsize{8}{10}\selectfont
+        \textbf{\ragioneSocAzienda}\\
+        \indirizzoAzienda\\
+        \sitoAzienda\\
+    }
+    }
+
+\cfoot{{\fontsize{8}{10}\selectfont \thepage/\pageref{LastPage}}} %per le prime pagine: mostra solo il numero romano
+
+\rfoot{{\fontsize{8}{10}\selectfont Tel. \telTutorAziendale\\
+        email: \emailAzienda \\
+        \partitaIVAAzienda \\}}
+}
+
+%----------------------------------------------------------------------------------------
 % 	HEADING STILE
 %----------------------------------------------------------------------------------------
+
 \newcommand\textline[4][t]{%
     \noindent\parbox[#1]{.333\textwidth}{\raisebox{-0.40\height}{#2}}%
     \parbox[#1]{.333\textwidth}{\centering #3}%
     \parbox[#1]{.333\textwidth}{\raggedleft #4}%
 }
 
-\lhead{
-    \textline[t]{\includegraphics[width=1cm, keepaspectratio=true]{img/UniPd.png}}
-    {Piano di lavoro stage presso \\\ragioneSocAzienda}
-    {\nomeStudente \cognomeStudente\\ (\matricolaStudente)}
-}
+% Header delle pagine UNIPD style, commentarle se si intende usare lo stile aziendale
+
+\stileUNIPD
+
+% Header delle pagine stile aziendale, usaree, dopo aver chiesto il consenso all'azienda
+% per l'uso del logo e dei dati personali. Commentarle se si intende usare l'UNIPD style
+
+%\stileAziendale
 
 % Line under the heading
 \renewcommand{\headrulewidth}{0.4pt}  
@@ -81,6 +135,7 @@ head=30pt
 %***PIÈ DI PAGINA***
 %\lfoot{\includegraphics[keepaspectratio = true, width = 25px] {img/UniPd.png} \textit{\nomeStudente 
 %\cognomeStudente (\matricolaStudente)}\\ \footnotesize{\emailStudente}}
-\rfoot{\thepage/\pageref{LastPage}} %per le prime pagine: mostra solo il numero romano
-\cfoot{}
+%\rfoot{\thepage/\pageref{LastPage}} %per le prime pagine: mostra solo il numero romano
+
+    
 \renewcommand{\footrulewidth}{0.4pt}   %Linea sopra il piè di pagina
